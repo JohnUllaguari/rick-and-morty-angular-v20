@@ -1,1 +1,71 @@
-// Estilos a tu preferencia (Se recomienda estilos sencillos y claros)
+// Estilos a tu preferencia (Se recomienda estilos sencillos y claros)/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #0f2027; /* Complementa bien con el gradiente animado del componente */
+  color: #e0e0e0;
+  overflow-x: hidden;
+}
+
+/* Header principal */
+.main-header {
+  background: linear-gradient(90deg, #2575fc, #6a11cb);
+  color: white;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(106,17,203,0.7);
+  user-select: none;
+
+  h1 {
+    font-size: 2.8rem;
+    text-shadow: 0 0 12px rgba(255,255,255,0.7);
+  }
+
+  p {
+    margin-top: 0.4rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    opacity: 0.85;
+  }
+}
+
+/* Main content para centrar y dar espacio */
+.main-content {
+  max-width: 1300px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  min-height: calc(100vh - 120px); /* Ajusta según header y posibles footers */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Opcional: estilos para router outlet si quieres algo */
+router-outlet {
+  display: block;
+}
+
+/* Scrollbar custom (opcional) */
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #6a11cb;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #2575fc;
+}
